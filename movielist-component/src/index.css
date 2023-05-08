@@ -1,0 +1,14 @@
+li{
+list-style: none;
+display: inline-block;
+width: 80%;
+}
+h1{
+    color: red;
+}
+h2{
+    color:blue
+}
+.bewertung{
+    font-weight: bold;
+}
