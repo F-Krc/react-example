@@ -16,34 +16,35 @@ function App() {
     }
   }, []);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const API_KEY = '49b97992ef055c5033bfd0c0c9ef93cd';
-      if (cityName) {
-        try {
-          const response = await fetch(
-            `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${API_KEY}`
-          );
-          if (response.ok) {
-            const data = await response.json();
-            //console.log(data);
-            setWeatherData(data);
-            localStorage.setItem('lastSearchedCity', cityName);
-            setLoading(false);
-            setError('');
-          } else {
-            setError('City not found.');
-            setWeatherData(null);
-          }
-        } catch (error) {
-          setError('API query failed.');
-          //console.log(error);
-          setWeatherData(null);
-        }
-      }
-    };
-    fetchData();
-  }, [cityName]);
+ useEffect(() => {
+   const fetchData = async () => {
+     const API_KEY = '49b97992ef055c5033bfd0c0c9ef93cd';
+     if (cityName) {
+       try {
+         const response = await fetch(
+           `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&units=metric&appid=${API_KEY}`
+         );
+
+         const data = await response.json();
+
+         if (response.ok) {
+           setWeatherData(data);
+           localStorage.setItem('lastSearchedCity', cityName);
+           setLoading(false);
+           setError('');
+         } else {
+           setError('City not found.');
+           setWeatherData(null);
+         }
+       } catch (error) {
+         setError('API query failed.');
+         setWeatherData(null);
+       }
+     }
+   };
+   fetchData();
+ }, [cityName]);
+
 
   //console.log(weatherData);
   return (

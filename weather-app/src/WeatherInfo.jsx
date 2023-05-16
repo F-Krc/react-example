@@ -2,6 +2,10 @@ import React from 'react';
 
 function WeatherInfo({ weatherData }) {
     //console.log(weatherData);
+     if (weatherData === null) {
+       return <p>No weather data available.</p>;
+     }
+
   return (
     <div className='weatherInfo'>
       <h2>{weatherData.name}</h2>
