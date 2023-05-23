@@ -1,10 +1,10 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
 function Navigation() {
   const items = [
-    { name: "Me", to: "/" },
-    { name: "Hobbies", to: "/hobbies" },
-    { name: "Contact", to: "/contact" },
+    { name: 'Me', to: '/' },
+    { name: 'Hobbies', to: '/hobbies' },
+    { name: 'Contact', to: '/contact' },
   ];
 
   return (
@@ -12,7 +12,9 @@ function Navigation() {
       <ul>
         {items.map((item) => (
           <li key={item.to}>
-            <NavLink to={item.to} activeclassname='active'>{item.name}</NavLink>
+            <NavLink to={item.to} activeclassname="active">
+              {item.name}
+            </NavLink>
           </li>
         ))}
       </ul>
@@ -21,5 +23,3 @@ function Navigation() {
 }
 
 export default Navigation;
-
-

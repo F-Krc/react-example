@@ -13,8 +13,8 @@ function Me() {
           <h2>Fatih Karaca</h2>
           <p className="content-text">
             I was born in Erzurum/Turkey. I studied math. I am working as a web developer. I am learning Frontend and
-            Backend programming languages. I know HTML, CSS, SCSS. Bootstrap and JavaScript. I use React as UI, Node.js and MongoDB as
-            backend.
+            Backend programming languages. I know HTML, CSS, SCSS. Bootstrap and JavaScript. I use React as UI, Node.js
+            and MongoDB as backend.
           </p>
           <br />
           <br />
@@ -38,4 +38,3 @@ function Me() {
 }
 
 export default Me;
-
