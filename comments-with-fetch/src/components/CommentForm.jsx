@@ -39,8 +39,8 @@ const handleSubmit = (e) => {
         ></textarea>
         {error && <p className="submit-warning">{error}</p>}
         <div>
-          <input type="checkbox" checked={allow} onChange={(e) => setAllow(e.target.checked)} />
-          <span>Ich habe die Datenschutzerklärung gelesen und akzeptiere sie</span>
+          <input type="checkbox" id="checkbox" checked={allow} onChange={(e) => setAllow(e.target.checked)} />
+          <label htmlFor="checkbox">Ich habe die Datenschutzerklärung gelesen und akzeptiere sie</label>
         </div>
         <br />
         <button type="submit" className="submit-button">
