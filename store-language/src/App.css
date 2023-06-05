@@ -1,0 +1,26 @@
+.app {
+  text-align: center;
+  background: linear-gradient(to bottom right, #d8c383, #fcd03e);
+  padding: 20px;
+  height: 100vh;
+}
+
+.select {
+  margin-top: 20px;
+}
+
+.select select {
+  width: 200px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 8px;
+  background-color: #fff;
+}
+
+.content {
+  margin-top: 50px;
+  font-size: 42px;
+  font-weight: 600;
+}
